@@ -116,3 +116,362 @@ body {
     font-size: 14px;
     margin-top: 8px;
 }
+
+/*Test-page specific CSS*/
+
+.test-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.test-header h1 {
+    color: #244A73;
+    font-size: 30px;
+    margin: 10px 0px 5px 10px;
+}
+
+.test-header h2 {
+    color: #64748B;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 10px 0px 5px 10px;
+}
+
+.research-id {
+    background-color: #DBEAFE;
+    color: #1683F8;
+    padding: 6px 14px;
+    border-radius: 24px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #F4F6FA;
+    padding-bottom: 1px;
+}
+
+.progress-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 18px;
+
+    padding: 20px 24px;
+    margin: 12px 10px;
+}
+
+.progress-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 16px;
+}
+
+.progress-heading h3 {
+    color: #172B4D;
+    font-size: 22px;
+    margin: 0;
+}
+
+.progress-heading span {
+    color: #64748B;
+    font-size: 16px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+
+    background-color: #E2E8F0;
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+
+    background-color: #244A73;
+    border-radius: 20px;
+
+    transition: width 0.3s ease;
+}
+
+.timer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 12px;
+}
+
+.timer span {
+    color: #64748B;
+    font-size: 18px;
+}
+
+.timer strong {
+    color: #244A73;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.timer.warning strong {
+    color: #DC2626;
+}
+
+.part-section {
+    margin: 30px 10px;
+}
+
+.part-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+.part-heading h2 {
+    color: #244A73;
+    font-size: 24px;
+    margin: 0;
+}
+
+.part-heading span {
+    color: #64748B;
+    font-size: 16px;
+}
+
+.question-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+
+    padding: 24px;
+    margin-bottom: 18px;
+}
+
+.question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 16px;
+}
+
+.question-number {
+    background-color: #DBEAFE;
+    color: #244A73;
+
+    padding: 6px 12px;
+    border-radius: 20px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.question-type {
+    color: #64748B;
+    font-size: 14px;
+}
+
+.question-card h3 {
+    color: #172B4D;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+
+.question-card p {
+    color: #334155;
+    font-size: 17px;
+    margin: 0 0 18px 0;
+}
+
+/* MCQ Option Format */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 13px 16px;
+
+    border: 1px solid #CBD5E1;
+    border-radius: 10px;
+
+    color: #334155;
+    font-size: 16px;
+
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.option:hover {
+    background-color: #EFF6FF;
+    border-color: #244A73;
+}
+
+.option input {
+    accent-color: #244A73;
+    cursor: pointer;
+}
+
+/* SA Format */
+.question-card textarea {
+    width: 100%;
+    min-height: 110px;
+
+    padding: 12px 14px;
+
+    border: 1px solid #CBD5E1;
+    border-radius: 10px;
+
+    background-color: #FFFFFF;
+
+    color: #172B4D;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+
+    resize: none;
+    box-sizing: border-box;
+
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.question-card textarea:focus {
+    border-color: #244A73;
+    box-shadow: 0 0 0 2px #DBEAFE;
+}
+
+.question-card textarea::placeholder {
+    color: #94A3B8;
+}
+
+.graph-container {
+    width: 100%;
+    margin: 20px 0;
+}
+
+#calculator {
+    width: 100%;
+    height: 450px;
+}
+
+.submit-section {
+    display: flex;
+    justify-content: center;
+    margin: 30px 10px;
+}
+
+#submitButton {
+    background-color: #244A73;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    padding: 13px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#submitButton:hover {
+    background-color: #1B3A5C;
+}
+
+#submitButton:disabled {
+    background-color: #94A3B8;
+    cursor: not-allowed;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal {
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 420px;
+    padding: 28px;
+    border-radius: 16px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.modal h2 {
+    color: #244A73;
+    font-size: 22px;
+    margin-top: 0;
+}
+
+.modal p {
+    color: #334155;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.modal-warning {
+    color: #DC2626 !important;
+    font-size: 14px !important;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+/* Modal Buttons */
+.modal-buttons button {
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Cancel Button */
+#cancelSubmit {
+    background-color: #FFFFFF;
+    color: #475569;
+    border: 1px solid #CBD5E1;
+}
+
+#cancelSubmit:hover {
+    background-color: #F1F5F9;
+}
+
+/* Confirm Submit Button */
+#confirmSubmit {
+    background-color: #244A73;
+    color: #FFFFFF;
+    border: 1px solid #244A73;
+}
+
+#confirmSubmit:hover {
+    background-color: #1B3A5C;
+}
