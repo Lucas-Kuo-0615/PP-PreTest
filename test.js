@@ -113,6 +113,7 @@ async function getPretest() {
         // Start the Timer
         startTimer(data.attempt.started_at);
 
+        sessionStorage.setItem("pretest_research_id", data.research_id);
         researchID.textContent = data.research_id;
     } catch (error) {
         console.error("Get Pre-Test error:", error);
@@ -259,8 +260,6 @@ async function submitPretest(autoSubmit = false) {
         if (!response.ok || !data.success) {
             throw new Error(data.message || "Unable to submit Pre-Test.");
         }
-
-        alert("Your Pre-Test has been submitted successfully!");
 
         // Clear the session after successful submission
         sessionStorage.removeItem("pretest_session_token");
