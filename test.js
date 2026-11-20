@@ -96,8 +96,7 @@ async function getPretest() {
         if (!response.ok || !data.success) {
 
             if (data.already_submitted) {
-                alert("This Pre-Test has already been submitted.");
-                window.location.href = "index.html";
+                window.location.href = "final.html";
                 return;
             }
 
@@ -288,11 +287,31 @@ function scheduleSave() {
     }, 1000);
 }
 
-calculator.setExpression({
-    id: "function",
-    latex: "y=\\frac{\\sin(x)}{x}"
-});
-
+calculator.setExpressions([
+    {
+        id: "sinc-left",
+        latex: "y=\\frac{\\sin x}{x}\\{x<0\\}",
+        color: "#244A73",
+        secret: true,
+        lineWidth: 4
+    },
+    {
+        id: "sinc-right",
+        latex: "y=\\frac{\\sin x}{x}\\{x>0\\}",
+        color: "#244A73",
+        secret: true,
+        lineWidth: 4
+    },
+    {
+        id: "hole",
+        latex: "(0,1)",
+        color: "#244A73",
+        secret: true,
+        pointStyle: Desmos.Styles.OPEN,
+        pointSize: 10,
+        dragMode: Desmos.DragModes.NONE
+    }
+]);
 
 document.querySelectorAll(".question-card input, .question-card textarea").forEach((input) => {
     input.addEventListener("change", () => {

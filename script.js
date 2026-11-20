@@ -7,16 +7,13 @@ const researchID = document.getElementById("ResearchID");
 const errorMessage = document.getElementById("errorMessage");
 const startButton = document.getElementById("startButton");
 
-// Testing Data
-const validIDs = ["S001", "S002", "S003"];
-
 startForm.addEventListener("submit", async function (event) {
     event.preventDefault();
     const studentID = researchID.value.trim().toUpperCase();
     errorMessage.textContent = "";
 
     if (!/^[A-Z][0-9]{3}$/.test(studentID)) {
-        errorMessage.textContent = "Invalid Research ID format. Please use one letter followed by three numbers.";
+        errorMessage.textContent = "Invalid Research ID format.";
 
         return;
     }
@@ -51,6 +48,7 @@ startForm.addEventListener("submit", async function (event) {
 
         sessionStorage.setItem("pretest_session_token", data.session_token);
         sessionStorage.setItem("pretest_session_expires", data.expires_at)
+        sessionStorage.setItem("pretest_research_id", studentID);
         window.location.href = "test.html"; // Navigate to Test Window
     } catch (error) {
         console.error("Verification error:", error);
